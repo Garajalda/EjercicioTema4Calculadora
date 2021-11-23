@@ -9,12 +9,12 @@
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/prin_layoutvertical_fragmentA"
         android:name="com.gara.ejercicio1.AFragment"
-        android:layout_width="383dp"
-        android:layout_height="610dp"
+        android:layout_width="323dp"
+        android:layout_height="285dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent="0.5"
         tools:layout="@layout/fragment_a" />
 
