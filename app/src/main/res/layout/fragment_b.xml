@@ -1,14 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
+        <Button
+            android:id="@+id/btnCuadrado"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="x²"
+            app:layout_constraintEnd_toStartOf="@+id/btnRaiz"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnRaiz"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="√2"
+            app:layout_constraintEnd_toStartOf="@+id/btnTan"
+            app:layout_constraintStart_toEndOf="@+id/btnCuadrado"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnInverso"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="1/x"
+            app:layout_constraintEnd_toStartOf="@+id/btnSe"
+            app:layout_constraintStart_toEndOf="@+id/btnCo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnSe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="SE"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnInverso"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnCo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="COS"
+            app:layout_constraintEnd_toStartOf="@+id/btnInverso"
+            app:layout_constraintStart_toEndOf="@+id/btnInversor"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnTan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="TAN"
+            app:layout_constraintEnd_toStartOf="@+id/btnInversor"
+            app:layout_constraintStart_toEndOf="@+id/btnRaiz"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnInversor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="(+/-)"
+            app:layout_constraintEnd_toStartOf="@+id/btnCo"
+            app:layout_constraintStart_toEndOf="@+id/btnTan"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

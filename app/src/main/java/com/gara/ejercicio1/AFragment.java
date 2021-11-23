@@ -2,11 +2,16 @@ package com.gara.ejercicio1;
 
 import android.os.Bundle;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -55,10 +60,37 @@ public class AFragment extends Fragment {
         }
     }
 
+
+
+            Button[] button = new Button[10];
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_a, container, false);
+        View view = inflater.inflate(R.layout.fragment_a, container, false);
+
+        for (int i = 0; i < button.length; i++) {
+            int id = getResources().getIdentifier("btn"+i,"id",getActivity().getPackageName());
+            button[i] = view.findViewById(id);
+        }
+
+        for (int i = 0; i < 10; i++) {
+            final int finalI = i;
+            ((Button)button[i]).setOnClickListener(new View.OnClickListener() {
+                int cont = finalI;
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(getContext(), button[cont].getText()+"", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
+        }
+
+
+
+        return view;
     }
+
 }

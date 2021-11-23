@@ -7,9 +7,37 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="estoyhorizontal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:text="0"
+        android:textAlignment="viewStart"
+        android:textSize="80sp"
+        app:autoSizeTextType="none"
+        app:layout_constraintBottom_toTopOf="@+id/prin_layoutvertical_fragmentB"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/prin_layoutvertical_fragmentA"
+        android:name="com.gara.ejercicio1.AFragment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_a" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/prin_layoutvertical_fragmentB"
+        android:name="com.gara.ejercicio1.BFragment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prin_layoutvertical_fragmentA"
+        tools:layout="@layout/fragment_b" />
 </androidx.constraintlayout.widget.ConstraintLayout>
